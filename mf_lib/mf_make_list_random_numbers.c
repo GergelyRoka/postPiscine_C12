@@ -1,4 +1,3 @@
-#include "ft_list.h"
 #include "mf_list.h"
 
 t_list	*mf_make_list_random_numbers(int n)

@@ -1,4 +1,4 @@
-#include "ft_list.h"
+#include "mf_list.h"
 #include <string.h>
 
 char	**mf_creat_str_list()

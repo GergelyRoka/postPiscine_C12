@@ -1,5 +1,5 @@
-#include "ft_list.h"
-#include "mf_list.h"
+#include "ft_lib/ft_list.h"
+#include "mf_lib/mf_list.h"
 
 //test_ex05 | ft_list_push_strs ft_list_clear
 void	test_ex05();

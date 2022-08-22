@@ -1,7 +1,7 @@
 #ifndef MF_LIST_H
 #define MF_LIST_H
 
-#include "ft_list.h"
+#include "../ft_lib/ft_list.h"
 
 #include <stdio.h>
 #include <time.h>
