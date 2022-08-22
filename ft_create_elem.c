@@ -5,7 +5,7 @@ t_list	*ft_create_elem(void *data);
 
 t_list	*ft_create_elem(void *data)
 {
-	t_list *element;
+	t_list	*element;
 
 	if(!(element = malloc(sizeof(t_list))))
 		return (0);
