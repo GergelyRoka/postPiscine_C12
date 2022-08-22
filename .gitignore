@@ -1,3 +1,6 @@
 
 a.exe
 .vscode/settings.json
+ft_lib/ft_list.h.gch
+mf_lib/mf_list.h.gch
+tests_lib/tests.h.gch
