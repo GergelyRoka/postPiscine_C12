@@ -16,4 +16,5 @@ t_list	*mf_make_list_random_numbers(int n)
 		ft_list_push_front(&begin_list, data);
 		++i;
 	}
+	return (begin_list);
 }
