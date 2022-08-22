@@ -1,5 +1,6 @@
 #include "ft_lib/ft_list.h"
 #include "mf_lib/mf_list.h"
+//#include "tests_lib/tests.h"
 
 //test_ex05 | ft_list_push_strs ft_list_clear
 void	test_ex05();
@@ -18,9 +19,14 @@ int int_cmp(void *data1, void *data2);
 
 void test_ex15();
 
+int cmp(void *data, void *ref);
+
+void test_for();
+
 int main(void)
 {
-	test_ex15();
+	test_for();
+	//test_ex15();
 }
 
 
@@ -143,4 +149,32 @@ void test_ex15()
 	ft_sorted_list_insert(&begin_list, number, int_cmp);
 	mf_print_list(begin_list);
 	ft_list_clear(begin_list, free);
+}
+
+
+void test_for()
+{
+	t_list	*begin_list;
+	int		*ref;
+
+	ref = malloc(sizeof(int));
+	*ref = 49;
+
+	begin_list = mf_make_list_random_numbers(10);
+	mf_print_list(begin_list);
+	ft_list_remove_if(&begin_list, ref, cmp, free);
+
+	mf_print_list(begin_list);
+
+	free(ref);
+	ft_list_clear(begin_list, free);
+
+
+	
+}
+
+int cmp(void *data, void *ref)
+{
+	//printf("%i > %i = %i\n",*(int*)data, *(int*)ref, *(int*)data > *(int*)ref);
+	return (!(*(int*)data > *(int*)ref));
 }
