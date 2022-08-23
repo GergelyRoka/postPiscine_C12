@@ -5,9 +5,9 @@
 
 void	ft_list_push_front(t_list **begin_list, void *data);
 void	print_list(t_list *begin_list);
-void	push_n_print(t_list **begin_list, int i);
+void	push_n_print(t_list **begin_list);
 
-int	main(int argc, char const *argv[])
+int	main(void)
 {
 	t_list	*head_of_list;
 	int		i;
@@ -17,7 +17,10 @@ int	main(int argc, char const *argv[])
 	srand(time(NULL));
 	print_list(head_of_list);
 	while (i < 5)
-		push_n_print(&head_of_list, ++i);
+	{
+		push_n_print(&head_of_list);
+		++i;
+	}
 	return (0);
 }
 
@@ -53,7 +56,7 @@ void print_list(t_list *begin_list)
 	printf("<<<<<<<<<<<<<<<<<<<<<<<<< THE  END >>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n");
 }
 
-void	push_n_print(t_list **begin_list, int i)
+void	push_n_print(t_list **begin_list)
 {
 	int	*int_data;
 
