@@ -65,7 +65,7 @@ void	push_n_print(t_list **begin_list)
 	else
 	{
 		*int_data = rand() % 100;
-		printf("PUSH: %i\n", *int_data);
+		printf("PUSH front: %i\n", *int_data);
 		ft_list_push_front(begin_list, int_data);
 		print_list(*begin_list);
 	}
