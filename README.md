@@ -4,3 +4,6 @@
 Compiling with gcc in Win/Linux:
 
 gcc \*.c ft_lib/\*c mf_lib/\*.c tests_lib/\*.c
+
+Folder exercises contains semi-moulinette-compatible files with main.c for testing.
+
