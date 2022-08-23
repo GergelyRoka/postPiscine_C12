@@ -7,6 +7,7 @@ int		ft_list_size(t_list *begin_list);
 void	ft_list_push_front(t_list **begin_list, void *data);
 void	print_list(t_list *begin_list);
 void	push_random(t_list **begin_list);
+void	ft_list_clear(t_list *begin_list, void (*free_fct)(void *));
 
 int	main(void)
 {
@@ -23,6 +24,7 @@ int	main(void)
 		print_list(head_of_list);
 		++i;
 	}
+	ft_list_clear(head_of_list, free);
 	return (0);
 }
 
@@ -80,5 +82,18 @@ void	ft_list_push_front(t_list **begin_list, void *data)
 	{
 		element -> next = *begin_list;
 		*begin_list = element;
+	}
+}
+
+void	ft_list_clear(t_list *begin_list, void (*free_fct)(void *))
+{
+	t_list	*dead_one;
+	while(begin_list)
+	{
+		dead_one = begin_list;
+		begin_list = begin_list -> next;
+		free_fct(dead_one -> data);
+		dead_one -> next = NULL;
+		free(dead_one);
 	}
 }
