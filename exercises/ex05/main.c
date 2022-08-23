@@ -1,11 +1,15 @@
+/*
+ex05
+Testing t_list	*ft_list_push_strs(int size, char **strs);
+*/
 #include "ft_list.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <time.h>
 
 t_list	*ft_list_push_strs(int size, char **strs);
 t_list	*ft_create_elem(void *data);
 void	print_list(t_list *begin_list);
+void	list_links_free(t_list *begin_list);
 
 int main(int argc, char **argv)
 {
@@ -20,6 +24,7 @@ int main(int argc, char **argv)
 	printf("\nList created from arguments of the main() in reversed order:");
 	//example: ./a.out 1 2 asd  list: asd 2 1
 	print_list(head_of_list);
+	list_links_free(head_of_list);
 	return (0);
 }
 
@@ -53,4 +58,16 @@ void print_list(t_list *begin_list)
 		}
 	}
 	printf("<<<<<<<<<<<<<<<<<<<<<<<<< THE  END >>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
+}
+
+void	list_links_free(t_list *begin_list)
+{
+	t_list	*dead_one;
+	while (begin_list)
+	{
+		dead_one = begin_list;
+		begin_list = begin_list -> next;
+		dead_one -> next = NULL;
+		free(dead_one);
+	}
 }
