@@ -103,7 +103,7 @@ void	_print_list(t_list *head, char *msg)
 		i = 1;
 		while (head)
 		{
-			printf("  %i) adr: %p || next: %p || data: %i\n", i++, head, head -> next, *(int*)head -> data);
+			printf("  %i)\tadr: %p || next: %p || data: %i\n", i++, head, head -> next, *(int*)head -> data);
 			head = head -> next;
 		}
 	}
