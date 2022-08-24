@@ -47,4 +47,4 @@ void	_switch_elements(t_list **begin_list, t_list *target)
 		target2 -> next = target;
 		current -> next = target2;
 	}
-} 
+}
