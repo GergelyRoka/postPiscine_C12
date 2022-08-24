@@ -26,8 +26,8 @@ int	main(void)
 		_print_list(head, "The list");
 		_insert_number(&head, 42);
 		_insert_number(&head, 42);
-		_insert_number(&head, 0);
-		_insert_number(&head, 100);
+		_insert_number(&head, 21);
+		_insert_number(&head, 61);
 		_print_list(head, "\nThe list after insertions.");
 	}
 	{
