@@ -34,6 +34,10 @@ int	main(void)
 		_print_list(head2, "Empty second list");
 		ft_list_merge(&head, head2);
 		_print_list(head, "First list after merge with mepty list");
+		head2 = _make_list_rand_nums(1);
+		_print_list(head2, "New second list");
+		ft_list_merge(&head, head2);
+		_print_list(head, "Final merge - first list");
 	}
 	ft_list_clear(head, free);
 	return 0;
