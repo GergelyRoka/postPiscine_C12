@@ -80,10 +80,10 @@ void	ft_list_clear(t_list *begin_list, void (*free_fct)(void *))
 
 t_list	*_make_list_rand_nums(unsigned int size)
 {
-	t_list	*head;
-	t_list	*new_elem;
-	int		*data;
-	int		i;
+	t_list			*head;
+	t_list			*new_elem;
+	int				*data;
+	unsigned int	i;
 	
 	head = NULL;
 	i = 0;
